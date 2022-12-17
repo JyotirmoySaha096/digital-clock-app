@@ -42,7 +42,9 @@ function App() {
 
   const [currDate,setCurrDate] = useState(completeDate);
 
-  const updateTime = () =>{
+  const [options,setOptions] = useState(true)
+
+const updateTime = () =>{
     time = new Date().toLocaleTimeString();
     setCurrTime(time);
   }
@@ -59,18 +61,31 @@ function App() {
   }
 
   setInterval(updateDate,60000)
+
+  let time24 = new Date().toLocaleTimeString('en-US',{hour12:false})
+  const[currTime24,setCurrTime24] = useState(time24);
+  const updateTime24 = () =>{
+    time24 = new Date().toLocaleTimeString('en-US',{hour12:false});
+    setCurrTime24(time24);
+  }
+  setInterval(updateTime24,1000)
   
   const handleOnClick = () => {
-
+    if(options === true){
+      setOptions(false);
+    }
+    if(options === false){
+      setOptions(true)
+    }
   }
 
   return (
     <>
     <div className="container">
       <h3>A SIMPLE DIGITAL CLOCK</h3>
-      <h1>{currTime}</h1>
+      <h1>{options ? currTime:currTime24}</h1>
       <h2>{currDate}</h2>
-      <button className='btn' onClick={handleOnClick}>Switch to military time format.</button>
+      <button className='btn' onClick={handleOnClick}>Switch to {options ? 24 : 12}-hours time format.</button>
     </div>
     </>
   );
