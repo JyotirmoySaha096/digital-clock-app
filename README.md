@@ -1,3 +1,8 @@
+Digital-Clock-App:
+Project demo URL: https://digital-clock-app.web.app
+
+This is a simple project where there is a digital clock which can show time and date in two formats 12h and 24h. It is created using react.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
