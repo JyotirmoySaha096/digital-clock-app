@@ -60,7 +60,7 @@ const updateTime = () =>{
     console.log(newDate);
   }
 
-  setInterval(updateDate,60000)
+  setInterval(updateDate,60000);
 
   let time24 = new Date().toLocaleTimeString('en-US',{hour12:false})
   const[currTime24,setCurrTime24] = useState(time24);
