@@ -1,7 +1,5 @@
 Digital-Clock-App:
-Project Console: https://console.firebase.google.com/project/digital-clock-app/overview
-
-Hosting URL: https://digital-clock-app.web.app
+Project demo URL: https://digital-clock-app.web.app
 
 This is a simple project where there is a digital clock which can show time and date in two formats 12h and 24h. It is created using react.
 
