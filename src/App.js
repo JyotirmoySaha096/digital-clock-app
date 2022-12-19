@@ -27,7 +27,7 @@ function App() {
   let date = new Date();
   let weekday = date.getDay();
   let month = months[date.getMonth()];
-  let dateDay = date.getDate()+1;
+  let dateDay = date.getDate();
   let year = date.getFullYear();
 
   // let hours = date.getHours();
@@ -53,7 +53,7 @@ const updateTime = () =>{
   const updateDate = ()=>{
     weekday = date.getDay();
     month = months[date.getMonth()];
-    dateDay = date.getDate()+1;
+    dateDay = date.getDate();
     year = date.getFullYear();
     let newDate = weekdayGenerator(weekday) + ", " + month + " " + dateDay + "th " + year;
     setCurrDate(newDate)
